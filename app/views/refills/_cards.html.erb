@@ -1,0 +1,93 @@
+<div class="cards">
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">String</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Chomp
+    </div>
+    <div class="card-copy">
+      <p>
+        "hello".chomp                #=> "hello"
+        <br />
+        "hello\n".chomp              #=> "hello"
+        <br />
+        "hello\r\n".chomp            #=> "hello"
+        <br />
+        "hello\n\r".chomp            #=> "hello\n"
+        <br />
+        "hello\r".chomp              #=> "hello"
+        <br />
+        "hello \n there".chomp       #=> "hello \n there"
+        <br />
+        "hello".chomp("llo")         #=> "he"
+        <br />
+        "hello\r\n\r\n".chomp('')    #=> "hello"
+        <br />
+        "hello\r\n\r\r\n".chomp('')  #=> "hello\r\n\r"
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>chomp</span></li>
+        <li>Alias<span>chomp</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">String</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Partition
+    </div>
+    <div class="card-copy">
+      <p>
+        "hello".partition("l")         #=> ["he", "l", "lo"]
+        <br />
+        "hello".partition("x")         #=> ["hello", "", ""]
+        <br />
+        "hello".partition(/.l/)        #=> ["h", "el", "lo"]
+      </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>partition</span></li>
+        <li>Alias<span>partition</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">String</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Rindex
+    </div>
+    <div class="card-copy">
+      <p>
+        "hello".rindex('e')             #=> 1
+        <br />
+        "hello".rindex('l')             #=> 3
+        <br />
+        "hello".rindex('a')             #=> nil
+        <br />
+        "hello".rindex(?e)              #=> 1
+        <br />
+        "hello".rindex(/[aeiou]/, -2)   #=> 1
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>rindex</span></li>
+        <li>Alias<span>rindex</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
