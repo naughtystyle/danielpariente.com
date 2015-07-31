@@ -1,0 +1,27 @@
+body {
+  background: rgb(44,44,44);
+  color: rgb(250,250,250);
+  margin: 0;
+  padding: 0;
+}
+
+section.main-container {
+  @include outer-container;
+  padding: 40px 0;
+}
+
+nav.top-bar {
+  @include span-columns(12);
+  @include row();
+  @include pad();
+  background: #666;
+  height: 3em;
+  text-align: center;
+}
+
+aside.left-container, aside.right-container {
+  @include span-columns(6);
+  @include pad();
+  min-height: 20em;
+  float: clear;
+}
