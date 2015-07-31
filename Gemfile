@@ -22,8 +22,9 @@ gem 'jquery-rails'
 gem 'spring',        group: :development
 
 group :production do
-  gem 'unicorn'
+  gem 'puma'
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 ruby "2.1.3"
