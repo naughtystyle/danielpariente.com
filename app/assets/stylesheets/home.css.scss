@@ -7,6 +7,8 @@ body {
 
 section.main-container {
   @include outer-container;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 28px;
   min-height: 350px;
   padding: 40px 0;
 }
@@ -25,4 +27,14 @@ aside.left-container, aside.right-container {
   @include pad();
   min-height: 20em;
   float: clear;
+}
+
+@media only screen and (max-width: 40.625em) {
+  aside.left-container, aside.right-container {
+    @include span-columns(12);
+    img.dan-image {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
