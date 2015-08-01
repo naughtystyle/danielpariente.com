@@ -6,7 +6,6 @@ gem 'rails', '4.1.6'
 gem 'bourbon', '~> 3.2.3'
 gem "capistrano", "2.14.2"
 gem "capistrano-rbenv", "1.0.5"
-gem 'google-analytics-rails'
 gem 'neat', '~> 1.5.1'
 gem 'refills'
 gem 'sass-rails', '~> 4.0.3'
