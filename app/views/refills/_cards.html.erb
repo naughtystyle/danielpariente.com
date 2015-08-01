@@ -5,7 +5,7 @@
       <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
     </div>
     <div class="card-header">
-      Chomp
+      chomp
     </div>
     <div class="card-copy">
       <p>
@@ -14,18 +14,6 @@
         "hello\n".chomp              #=> "hello"
         <br />
         "hello\r\n".chomp            #=> "hello"
-        <br />
-        "hello\n\r".chomp            #=> "hello\n"
-        <br />
-        "hello\r".chomp              #=> "hello"
-        <br />
-        "hello \n there".chomp       #=> "hello \n there"
-        <br />
-        "hello".chomp("llo")         #=> "he"
-        <br />
-        "hello\r\n\r\n".chomp('')    #=> "hello"
-        <br />
-        "hello\r\n\r\r\n".chomp('')  #=> "hello\r\n\r"
      </p>
     </div>
     <div class="card-stats">
@@ -42,7 +30,7 @@
       <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
     </div>
     <div class="card-header">
-      Partition
+      partition
     </div>
     <div class="card-copy">
       <p>
@@ -67,15 +55,11 @@
       <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
     </div>
     <div class="card-header">
-      Rindex
+      rindex
     </div>
     <div class="card-copy">
       <p>
         "hello".rindex('e')             #=> 1
-        <br />
-        "hello".rindex('l')             #=> 3
-        <br />
-        "hello".rindex('a')             #=> nil
         <br />
         "hello".rindex(?e)              #=> 1
         <br />
@@ -86,6 +70,154 @@
       <ul>
         <li>Method<span>rindex</span></li>
         <li>Alias<span>rindex</span></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Array</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      delete
+    </div>
+    <div class="card-copy">
+      <p>
+        a.delete("b")                   #=> "b"
+        <br />
+        a.delete("z")                   #=> nil
+        <br />
+        a.delete("z") { "not found" }   #=> "not found"
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>chomp</span></li>
+        <li>Alias<span>chomp</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Array</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      map
+    </div>
+    <div class="card-copy">
+      <p>
+        a.collect { |x| x + "!" }        #=> ["a!", "b!", "c!", "d!"]
+        <br />
+        a.map.with_index{ |x, i| x * i } #=> ["", "b", "cc", "ddd"]
+        <br />
+        a                                #=> ["a", "b", "c", "d"]
+      </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>map</span></li>
+        <li>Alias<span>collect</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Hash</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      has_key?
+    </div>
+    <div class="card-copy">
+      <p>
+        h = { "a" => 100, "b" => 200 }
+        <br />
+        h.has_key?("a")   #=> true
+        <br />
+        h.has_key?("z")   #=> false
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>has_key?</span></li>
+        <li>Alias<span>include?, key?, member?</span></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Hash</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      fetch
+    </div>
+    <div class="card-copy">
+      <p>
+        h.fetch("a")                            #=> 100
+        <br />
+        h.fetch("z", "go fish")                 #=> "go fish"
+        <br />
+        h.fetch("z") { |el| "go, #{el}"}   #=> "go fish, z"
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>fetch</span></li>
+        <li>Alias<span>fetch</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Hash</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      flatten
+    </div>
+    <div class="card-copy">
+      <p>
+        a =  {1=> "one", 2 => [2,"two"], 3 => "three"}
+        <br />
+        a.flatten    # => [1, "one", 2, [2, "two"], 3, "three"]
+        <br />
+        a.flatten(2) # => [1, "one", 2, 2, "two", 3, "three"]
+      </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>flatten</span></li>
+        <li>Alias<span>flatten</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">Fixnum</div></div>
+    <div class="card-image">
+      <img src="http://www.rubyinside.com/advent2006/wallpaper1920.jpg" alt="">
+    </div>
+    <div class="card-header">
+      next
+    </div>
+    <div class="card-copy">
+      <p>
+        1.next      #=> 2
+        <br />
+        (-1).next   #=> 0
+     </p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>Method<span>next</span></li>
+        <li>Alias<span>succ</span></li>
       </ul>
     </div>
   </div>
