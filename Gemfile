@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'blog', path: 'components/blog'
 
 gem 'rails', '4.1.6'
 

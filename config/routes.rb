@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'flashcards', to: 'home#flashcards', as: 'flashcards'
   get 'resume', to: 'home#resume', as: 'resume'
 
+  mount Blog::Engine, at: '/'
 end
