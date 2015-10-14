@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+components/blog/vendor/bundle/
+components/blog/vendor/bundle/*.*
+social_media/vendor/bundle/
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
