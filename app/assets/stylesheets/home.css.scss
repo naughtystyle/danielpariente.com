@@ -29,6 +29,11 @@ aside.left-container, aside.right-container {
   float: clear;
 }
 
+img.ruby-cert {
+  margin: 40px auto;
+  display: block;
+}
+
 @media only screen and (max-width: 40.625em) {
   aside.left-container, aside.right-container {
     @include span-columns(12);
