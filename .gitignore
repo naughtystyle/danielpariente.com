@@ -17,3 +17,8 @@ social_media/vendor/bundle/
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
