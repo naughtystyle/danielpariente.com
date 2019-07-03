@@ -1,0 +1,16 @@
+#!/bin/bash
+
+curl -sSL https://get.docker.com | sh
+
+usermod -aG docker ubuntu
+
+curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+mkdir /srv/docker
+curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/naughtystyle/danielpariente.com/master/docker-compose.yml
+
+curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercontent.com/naughtystyle/danielpariente.com/master/docker-compose-app.service
+systemctl enable docker-compose-app
+
+docker-compose -f /srv/docker/docker-compose.yml up -d
